@@ -35,14 +35,14 @@
 	<body>
 		<!--水平居中-->
 		<style type="text/css">
-			/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
-		    /*主轴对齐方式：         左对齐（默认） | 右对齐 | 居中对齐 | 两端对齐    | 平均分布*/
+					/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
+				    /*主轴对齐方式：         左对齐（默） | 右对齐       | 居中对齐 | 两端对齐              | 平均分布*/
 		   
 			.box_jc {
 				    -webkit-box-pack: center;
 				    -moz-justify-content: center;
 				    -webkit-justify-content: center;
-				    justify-content: space-around;
+				    justify-content: space-around;			/**/		
 			}
 		
 		</style>
@@ -50,7 +50,18 @@
 			<div class="is"></div>
 			<div class="is"></div>
 		</div>
-		<div class="box box_jc bs">
+		
+		<style type="text/css">
+					    /*align-items: 	flex-start 	 | flex-end | center  |    baseline  | stretch;*/
+					    /*交叉轴对齐方式：顶部对齐（默）| 底部对齐    | 居中对齐  | 上下对齐并铺满 | 文本基线对齐*/
+			.box_ai{
+				    -webkit-box-align: center;
+				    -moz-align-items: center;
+				    -webkit-align-items: center;
+				    align-items: center;			/**/		
+				}
+		</style>
+		<div class="box box_ai bs">
 			<div class="is">
 			</div>
 		</div>
