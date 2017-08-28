@@ -4,13 +4,12 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<title> flex layout </title>
-		
 		<style type="text/css">
 			/*common css style*/
 			* {box-sizing: border-box;}
 			.bs {
 				width: 100%;
-				height: 300px;
+/*				height: 300px;*/
 				border: 2px solid #21E6FF;
 			}
 			.is {
@@ -19,6 +18,8 @@
 				background: #990073;
 				margin: 10px;
 			}
+			
+			.bder {border: 1px solid #007BB6;}
 			
 			/*flex css*/
 			.box{
@@ -34,6 +35,7 @@
 	</head>
 	<body>
 		<!--水平居中-->
+		<h2>水平居中</h2>
 		<style type="text/css">
 					/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
 				    /*主轴对齐方式：         左对齐（默） | 右对齐       | 居中对齐 | 两端对齐              | 平均分布*/
@@ -51,6 +53,8 @@
 			<div class="is"></div>
 		</div>
 		
+		
+		<h2>垂直居中</h2>
 		<style type="text/css">
 					    /*align-items: 	flex-start 	 | flex-end | center  |    baseline  | stretch;*/
 					    /*交叉轴对齐方式：顶部对齐（默）| 底部对齐    | 居中对齐  | 上下对齐并铺满 | 文本基线对齐*/
@@ -65,6 +69,9 @@
 			<div class="is"></div>
 			<div class="is"></div>
 		</div>
+		
+		
+		<h2>自适应</h2>
 		<style type="text/css">
 			.item{
 			    -webkit-box-flex: 1.0;
@@ -79,5 +86,67 @@
 		</div>
 		
 		
+		<h2>流动</h2>
+		<style type="text/css">
+			.item{
+			    -webkit-box-flex: 1.0;
+			    -moz-flex-grow: 1;
+			    -webkit-flex-grow: 1;
+			    flex-grow: 1;			/**/	
+			}
+			
+			.box_fw{ flex-wrap: wrap}
+		</style>
+		<div class="box box_fw bs">
+			<div class="is"></div>
+			<div class="is"></div>
+			<div class="is"></div>
+			<div class="is"></div>
+			<div class="is"></div>
+		</div>
+		
+		
+		
+		<!--element 
+			https://h5.ele.me/msite/
+			
+		-->
+		<h2>饿了么</h2>
+		<style type="text/css">
+			.index-container_2XMzI, .index-main_2HHPe {
+				display: flex;
+				justify-content: space-between;
+			    display: -webkit-box;
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    -webkit-box-pack: justify;
+			    -webkit-justify-content: space-between;
+			    -ms-flex-pack: justify;
+			}
+			.index-main_2HHPe {
+			    -webkit-box-flex: 1;
+			     -webkit-flex-grow: 1; 
+			    -ms-flex-positive: 1;
+			    flex-grow: 1;
+			    -webkit-box-orient: vertical;
+			    -webkit-box-direction: normal;
+			    -webkit-flex-direction: column;
+			    -ms-flex-direction: column;
+			    flex-direction: column;
+			    padding: .4rem .266667rem .4rem 0;
+			    -webkit-user-select: none;
+			    -moz-user-select: none;
+			    -ms-user-select: none;
+			    user-select: none;
+			}
+		</style>
+		<section class="index-container_2XMzI bs">
+			<div class="logo-container_1XLJl_0 bder">
+				<img src="http://fuss10.elemecdn.com/1/26/f20bf45ee8efa382b10d676c893bfpng.png?imageMogr/format/webp/thumbnail/!120x120r/gravity/Center/crop/120x120/"/>
+			</div>
+			<div class="index-main_2HHPe bder">
+				<section class="index-line_1Zyr1"><h3 class="index-shopname_3_J4F"><span>港堡汉堡（南城店）</span></h3> <div class="index-supportWrap_VWrQG"></div></section>
+			</div>
+		</section>
 	</body>
 </html>
